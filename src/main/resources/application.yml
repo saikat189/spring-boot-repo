@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: spring-boot-file-upload
+    servlet:
+        multipart:
+            enabled: false
+            max-file-size: 500MB
+    datasource:
+        url: jdbc:postgresql://localhost:4040/practice
+        username: jcms
+        password: jcms
+    liquibase:
+        change-log: classpath:db/changelog/db.changelog-master.yml
+        default-schema: fileupload
+    thymeleaf:  
+        cache: false
+okta:  
+  oauth2:  
+    issuer: https://dev-691754.okta.com/oauth2/default
+    client-id: 0oaa4rgw81K9UhJEt4x6
+    client-secret: pQon4cGJA0qdHXyFfOaTevQHiTji1i9AR4FlwNsq
+server:
+    servlet:
+        contextPath: /spring-boot-file-upload
+    port: 8090
+logging:
+    level:
+        ROOT: DEBUG
